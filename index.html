@@ -5,17 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sổ tay Bitcoin</title>
 <meta name="description" content="Sổ tay học và tích trữ Bitcoin cho người mới ở Việt Nam. Từ cơ bản tới nâng cao, mua an toàn, giữ an toàn, giữ nhiều năm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout: one reading column (~70ch) with a sticky chapter list on the left at desktop width;
-   on a phone the chapter list folds into a top bar. Everything is inline: no fonts, no CDN. */
+   on a phone the chapter list folds into a top bar. Font: Be Vietnam Pro from Google Fonts (full Vietnamese marks); offline it falls back to the system sans. */
 :root{
   --bg:#f6f7f9; --surface:#ffffff; --surface-2:#edf0f4; --ink:#171a20; --ink-2:#4a515d; --muted:#737b89; --line:#d8dde5;
   --accent:#d9780f; --accent-ink:#8a4a05; --accent-soft:#fff1e0;
   --link:#1b5fa6;
   --good:#1b7f4b; --good-soft:#e3f5ea; --warn:#8f6200; --warn-soft:#fff6d6; --bad:#b3261e; --bad-soft:#fde8e6;
   --series-1:#2a78d6; --series-2:#eb6834;
-  --font-display:"Charter","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-display:"Be Vietnam Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-body:"Be Vietnam Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --radius:10px; --nav-w:260px; --col:72ch;
   color-scheme:light;
@@ -45,7 +48,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 a{color:var(--link);text-underline-offset:2px}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 img,svg{max-width:100%;height:auto}
-h1,h2,h3,h4{font-family:var(--font-display);line-height:1.2;text-wrap:balance;margin:0}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.35;text-wrap:balance;margin:0}
 h1{font-size:2.1rem;font-weight:700}
 h2{font-size:1.7rem;font-weight:700;margin-top:0.2rem}
 h3{font-size:1.25rem;font-weight:700;margin-top:1.8rem;margin-bottom:0.4rem}
@@ -54,7 +57,7 @@ p{margin:0 0 1rem}
 ul,ol{margin:0 0 1rem;padding-left:1.4rem}
 li{margin-bottom:0.35rem}
 li>ul,li>ol{margin-top:0.35rem}
-strong{font-weight:650}
+strong{font-weight:600}
 code,kbd{font-family:var(--font-mono);font-size:0.9em;background:var(--surface-2);padding:0.1em 0.35em;border-radius:5px}
 pre{font-family:var(--font-mono);font-size:0.85rem;background:var(--surface-2);padding:0.8rem 1rem;border-radius:var(--radius);overflow-x:auto;line-height:1.5}
 hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
@@ -95,7 +98,7 @@ main{min-width:0;padding-block:1.5rem 4rem;padding-left:max(16px,env(safe-area-i
 /* chapters */
 section.ch{padding-top:1.5rem;margin-bottom:3.5rem;scroll-margin-top:4rem}
 section.ch+section.ch{border-top:1px solid var(--line);padding-top:2.5rem}
-.eyebrow{font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:0.5rem}
+.eyebrow{font-family:var(--font-body);font-weight:600;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:0.5rem}
 .lead{font-size:1.12rem;color:var(--ink-2);margin:0.8rem 0 1.4rem}
 .hero{padding:0.5rem 0 1rem}
 .hero h1{font-size:2.6rem}
@@ -115,17 +118,17 @@ section.ch+section.ch{border-top:1px solid var(--line);padding-top:2.5rem}
 .box.couple{border-style:dashed} .box.couple .ic{background:var(--link);color:#fff}
 .box.rule{background:var(--accent-soft);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 details.ev{margin:0.6rem 0 1.2rem;font-size:0.85rem;color:var(--ink-2)}
-details.ev summary{cursor:pointer;color:var(--muted);font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.04em}
+details.ev summary{cursor:pointer;color:var(--muted);font-size:0.82rem}
 details.ev ul{margin:0.4rem 0 0}
 details.ev a{word-break:break-all}
-.tag{display:inline-block;font-family:var(--font-mono);font-size:0.72rem;padding:0.1em 0.5em;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);vertical-align:middle;white-space:nowrap}
+.tag{display:inline-block;font-size:0.75rem;padding:0.1em 0.5em;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);vertical-align:middle;white-space:nowrap}
 .tag.ok{border-color:var(--good);color:var(--good)} .tag.no{border-color:var(--bad);color:var(--bad)} .tag.q{border-color:var(--warn);color:var(--warn)}
 
 /* tables */
 .tw{overflow-x:auto;margin:1rem 0;-webkit-overflow-scrolling:touch}
 table{border-collapse:collapse;width:100%;font-size:0.92rem;min-width:420px}
 th,td{text-align:left;padding:0.5rem 0.6rem;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-weight:650;background:var(--surface-2);font-size:0.85rem}
+th{font-weight:600;background:var(--surface-2);font-size:0.85rem}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 tr.hl td{background:var(--accent-soft)}
 table.compact{font-size:0.86rem}
